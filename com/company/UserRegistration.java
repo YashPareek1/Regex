@@ -38,7 +38,7 @@ public class UserRegistration<pattern, matcher, result> {
         //validating email
         System.out.println("Enter Email : ");
         String Email = s.next();
-        pattern = Pattern.compile("^([A-Z|a-z|0-9](\\.|_){0,1})+[A-Z|a-z|0-9]\\@([A-Z|a-z|0-9])+((\\.){0,1}[A-Z|a-z|0-9]){2}\\.[a-z]{2,3}$", Pattern.CASE_INSENSITIVE);
+        pattern = Pattern.compile("^(?!\\.)[A-Za-z0-9]+([._%+-]?[0-9])*@[A-Za-z0-9-]+\\.[a-zA-Z]{2,6}(\\.[A-Za-z]{2,6})?$",Pattern.CASE_INSENSITIVE);
         matcher = pattern.matcher(Email);
         result = matcher.matches();
         if (result == true)
